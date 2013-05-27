@@ -8,32 +8,33 @@ if (computerChoice < 0.34) {
 	computerChoice = "scissors";
 }
 
-var result = compare(userChoice, computerChoice);
-console.log(result);
 
-compare = function(choice1, choice2){
+var compare = function(choice1, choice2){
     if (choice1 == choice2) {
         return "The result is a tie!";
     }
     if (choice1 == "rock") {
         if (choice2 == "scissors"){
-            return "rock wins";
+            return "you win";
         }    else {
-            return "paper wins";    
+            return "you lose";    
         }
     }
     if (choice1 == "paper") {
         if (choice2 == "rock"){
-            return "paper wins";
+            return "you win";
         }   else {
-            return "scissors wins";
+            return "you lose";
         }
     }
     if (choice1 == "scissors") {
         if (choice2 == "rock"){
-            return "rock wins";
+            return "you lose";
         } else {
-            return "scissors wins";
+            return "you win";
         }
     }
 };
+
+var result = compare(userChoice, computerChoice);
+alert(result);

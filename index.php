@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-	<head><link rel="stylesheet" type="text/css" href="homepage.css"> 
-		  <script src="rockpaperscissors.js"></script>	
+	<head>
+		<title>Rock, Paper, Scissors</title>
+		<link rel="stylesheet" type="text/css" href="homepage.css"> 
+		<script src="rockpaperscissors.js"></script>	
 	</head>
 	<body>
 		<h1>Rock, Paper, Scissors</h1>

@@ -1,3 +1,26 @@
+var test = function(){
+    var uChoice = document.getElementById("youChoice").value
+    var cChoice = cpuChoice();
+    showResult(uChoice, cChoice);
+};
+
+/*var userChoice = function(){
+    return prompt("Do you choose rock, paper or scissors?");
+}
+*/
+
+var cpuChoice = function(){
+    var computerChoice = Math.random();
+    if (computerChoice < 0.34) {
+        computerChoice = "rock";
+    } else if(computerChoice <= 0.67) {
+        computerChoice = "paper";
+    } else {
+        computerChoice = "scissors";
+    }
+    return computerChoice;
+}
+
 var compare = function(choice1, choice2){
     if (choice1 == choice2) {
         return "The result is a tie!";
@@ -23,31 +46,20 @@ var compare = function(choice1, choice2){
             return "you win";
         }
     }
+    return "Please enter rock, paper, or scissors!";
 }
 
-var userChoice = function(){
-    return prompt("Do you choose rock, paper or scissors?");
-}
-
-var cpuChoice = function(){
-    var computerChoice = Math.random();
-    if (computerChoice < 0.34) {
-        computerChoice = "rock";
-    } else if(computerChoice <= 0.67) {
-        computerChoice = "paper";
-    } else {
-        computerChoice = "scissors";
-    }
-    return computerChoice;
-}
 
 var showResult = function(userChoice, computerChoice){
     var result = compare(userChoice, computerChoice);
     alert(result);
-};
+}; 
 
-var userAction = function(){
-    var uChoice = userChoice();
-    var cChoice = cpuChoice();
-    showResult(uChoice, cChoice);
-};
+
+
+/*var test = function(){
+    var test2 = document.getElementById("youChoice").value
+    alert(test2);
+}*/
+
+
